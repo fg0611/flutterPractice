@@ -13,7 +13,7 @@ class Codes extends StatefulWidget {
 class _CodesState extends State<Codes> {
 String controller = '';
 
-  String qrcodeRes = '';
+String qrcodeRes = '';
 
   @override
   Widget build(BuildContext context) {
@@ -43,13 +43,15 @@ String controller = '';
             ),
 
             ///Qrcode widget
-            BarcodeWidget(data: controller.trim(), barcode: Barcode.code128()),
+            // BarcodeWidget(data: controller.trim(), barcode: Barcode.code128()),
 
             const SizedBox(
               height: 30,
             ),
 
-            Text(qrcodeRes),
+            Text(qrcodeRes.isNotEmpty ? qrcodeRes : "No Code"),        
+          
+          
           ],
         ),
       ),

@@ -1,10 +1,12 @@
 import 'package:barcode_widget/barcode_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
+import 'package:qr/pages/pay.dart';
 
 import 'pages/home.dart';
 import 'pages/users.dart';
 import 'pages/codes.dart';
+import 'pages/scanner.dart';
 
 
 void main() {
@@ -35,7 +37,7 @@ class _MyAppState extends State<MyApp> {
   final List<Widget> _pages = [
     const Home(),
     const Users(),
-    const Codes()
+    const Pay()
   ];
 
   @override
@@ -56,7 +58,7 @@ class _MyAppState extends State<MyApp> {
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.supervised_user_circle), label: "user"),
-            BottomNavigationBarItem(icon: Icon(Icons.qr_code), label: "codes"),
+            BottomNavigationBarItem(icon: Icon(Icons.qr_code), label: "pay"),
           ]),
     );
   }
